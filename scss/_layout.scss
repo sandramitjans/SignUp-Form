@@ -1,0 +1,188 @@
+.container {
+  color: #fff;
+  margin: 7rem 2.3rem;
+  text-align: center;
+
+  @include flexCenter;
+  flex-direction: column;
+
+  @include breakpoint(sm) {
+    width: 80%;
+    max-width: 45rem;
+  }
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    margin: unset;
+    max-width: $bp-xl;
+  }
+}
+
+.text {
+  margin-bottom: 7rem;
+
+  @include breakpoint(md) {
+    flex: 1;
+    margin-bottom: unset;
+    text-align: left;
+    padding-right: 2.5rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+
+    @include breakpoint(sm) {
+      font-size: 3.5rem;
+    }
+
+    @include breakpoint(md) {
+      font-size: 3.8rem;
+      line-height: 1.1;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__description {
+    color: $color-text;
+  }
+}
+
+.form-container {
+  @include breakpoint(md) {
+    flex: 1;
+  }
+
+  .promo {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $color-text;
+    padding: 1.5rem 4.5rem;
+    background-color: $color-accent-blue;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(md) {
+      padding: 1.5rem 3.5rem;
+    }
+
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+}
+
+.signup-form {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: $shadow;
+
+  &__input-container {
+    // margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    color: $color-neutral-dark-blue;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba($color-neutral-grayish-blue, 0.45);
+    font-weight: 600;
+
+    &::placeholder {
+      // font-weight: 600;
+    }
+  }
+
+  &__cta {
+    @include btnReset;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: $color-primary-green;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 -0.4rem 0 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      @media (hover: hover) {
+        background-color: rgba($color-primary-green, 0.7);
+      }
+    }
+  }
+
+  &__terms {
+    font-size: 1.15rem;
+    color: $color-neutral-grayish-blue;
+    padding: 0 1.5rem;
+
+    span {
+      color: $color-primary-red;
+      font-weight: 600;
+    }
+  }
+}
+
+.error-input {
+  color: $color-primary-red;
+  box-shadow: inset 0 0 0 2px $color-primary-red;
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.error {
+  opacity: 0;
+
+  &__msg {
+    font-size: 1.15rem;
+    color: $color-primary-red;
+    position: absolute;
+    // bottom: -2rem;
+    right: 0;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 2.5rem;
+    top: 0;
+    transform: translateY(50%);
+  }
+}
+
+.show {
+  opacity: 1;
+  margin-bottom: 3.2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+// COLORS
+$color-primary-red: hsl(0, 100%, 74%);
+$color-primary-green: hsl(154, 59%, 51%);
+
+$color-accent-blue: hsl(248, 32%, 49%);
+
+$color-neutral-dark-blue: hsl(249, 10%, 26%);
+$color-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+$color-text: rgba(255, 255, 255, 0.8);
+
+// FONT
+$font-default: 'Poppins', sans-serif;
+
+// etc
+$shadow: 0 0.7rem 0 0 rgba(0, 0, 0, 0.185);
+
+// BREAKPOINTS
+$bp-xs: 375px;
+$bp-sm: 600px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;

@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-default;
+  line-height: 1.7;
+  min-height: 100vh;
+  position: relative;
+
+  @include flexCenter;
+  flex-direction: column;
+
+  background-color: $color-primary-red;
+  background-image: url(/images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include breakpoint(sm) {
+    background-image: url(/images/bg-intro-desktop.png);
+  }
+}
